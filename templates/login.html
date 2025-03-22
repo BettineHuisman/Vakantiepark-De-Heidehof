@@ -1,0 +1,32 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1> Log in </h1>
+<br>
+<p>Log in om een huisje te boeken of om je boeking te beheren.</p>
+<p>Heb je nog geen account? Registreer je dan eerst.</p>
+<a href="/registreren" class="btn">Registreren</a>
+<br><br>
+<div>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.email.label(class="form-label")}}
+            {{form.email(class="form-control")}}
+            {% for error in form.email.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div class="form-group">
+            {{form.wachtwoord.label(class="form-label")}}
+            {{form.wachtwoord(class="form-control")}}
+            {% for error in form.wachtwoord.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn">{{form.inloggen.label.text}}</button>
+    </form>
+</div>
+
+{% endblock %}

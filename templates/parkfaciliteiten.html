@@ -1,0 +1,83 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div>
+    <h1>Onze faciliteiten</h1>
+    <p class="lead">
+        Bij Vakantiepark De Heidehof geniet je van een breed scala aan faciliteiten voor jong en oud. <br> 
+        Ontdek het gezellige <a class="inline-link" href="#restaurant">pannenkoekrestaurant</a>, waar je kunt smullen van de lekkerste gerechten. <br> 
+        Bezoek de <a class="inline-link" href="#kinderboerderij">kinderboerderij</a> en maak kennis met onze lieve dieren. <br>
+        Voor waterpret is er het verfrissende <a class="inline-link" href="#zwembad">buitenzwembad</a>, en kinderen kunnen zich urenlang uitleven in de grote <a class="inline-link" href="#speeltuin">speeltuin</a>. <br>
+        Of je nu op zoek bent naar ontspanning of avontuur, bij De Heidehof vind je het allemaal! <br>
+    </p>
+</div>
+
+<hr>
+
+<div>
+    <h2 id="restaurant" style="text-align: right;">De Gouden Koekenpan</h2>
+    <div class="clearfix">
+        <img class="float-left mr-3 img-fluid" style="max-width: 25%; height: auto;" src="{{url_for('static', filename='Pannenkoekrestaurant.webp')}}">
+        <p>
+            Het pannenkoekrestaurant 'De Gouden Koekenpan' op Vakantiepark De Heidehof is de ideale plek om te genieten van een heerlijke maaltijd. <br>
+            Proef onze ambachtelijke pannenkoeken, bereid met verse ingrediënten. <br> 
+            De gezellige, warme inrichting maakt het een perfecte plek voor het hele gezin. <br>
+            <br>
+            U bent uiteraard ook van harte welkom als u niet op ons park verblijft.
+            <p><a href="/parkfaciliteiten/restaurant" class="btn">Meer informatie</a></p>
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div>
+    <h2 id="kinderboerderij" style="text-align: left;">Kinderboerderij</h2>
+    <div class="clearfix">
+        <img class="float-right ml-3 img-fluid" style="max-width: 25%; height: auto;" src="{{url_for('static', filename='Kinderboerderij.webp')}}">
+        <p>
+            Maak kennis met de dieren op onze kinderboerderij! <br>
+            Van schattige geitjes tot nieuwsgierige konijnen, de kinderboerderij is een favoriete plek voor kinderen. <br>
+            Hier leren ze spelenderwijs over dieren en hun verzorging, terwijl ze heerlijk buiten kunnen spelen.
+            <br><br>
+            De kinderboerderij is dagelijks toegankelijk van zonsopgang tot zonsondergang.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div>
+    <h2 id="zwembad" style="text-align: right;">Zwembad</h2>
+    <div class="clearfix">
+        <img class="float-left mr-3 img-fluid" style="max-width: 25%; height: auto;" src="{{url_for('static', filename='Zwembad.webp')}}">
+        <p>
+            Neem een verfrissende duik in ons ruime buitenzwembad. <br>
+            Met een apart kinderbadje en comfortabele ligstoelen is het zwembad geschikt voor zowel ontspanning als speelplezier. <br>
+            Perfect op zonnige dagen!
+            <br><br>
+            Het zwembad is in de maanden april tot en met september dagelijks geopend van 08.00 - 20.00 uur.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div>
+    <h2 id="speeltuin" style="text-align: left;">Speeltuin</h2>
+    <div class="clearfix">
+        <img class="float-right ml-3 img-fluid" style="max-width: 25%; height: auto;" src="{{url_for('static', filename='Speeltuin.webp')}}">
+        <p>
+            Onze grote speeltuin is een paradijs voor kinderen. <br>
+            Met glijbanen, klimrekken en schommels biedt het volop mogelijkheden voor avontuur. <br>
+            Terwijl de kinderen spelen, genieten ouders van een ontspannen moment op de nabijgelegen picknickbankjes.
+            <br><br>
+            De speeltuin is dagelijks toegankelijk van zonsopgang tot zonsondergang.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+{% endblock %}

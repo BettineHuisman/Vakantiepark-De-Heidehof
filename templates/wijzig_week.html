@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1> Selecteer een weeknummer voor vakantiewoning {{woning_naam}} </h1>
+
+<form method="POST">
+    {{form.hidden_tag()}}
+    <div class="form-group">
+        {{form.week.label(class="form-label")}}
+        {{form.week(class="form-control")}}
+    </div>
+
+    <button type="submit" class="btn">{{form.boeken.label.text}}</button>
+</form>
+
+{% endblock %}

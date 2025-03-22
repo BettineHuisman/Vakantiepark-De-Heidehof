@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1> Mijn boekingen </h1>
+<br>
+<h3>Welkom {{ current_user.username }}</h3>
+<br>
+<a href="{{url_for('boeken')}}" class="btn">Nog een boeking plaatsen</a>
+<br>
+<br>
+{% if mijn_boekingen %}
+    <ul class="list-group">
+        {% for boeking in mijn_boekingen %}
+        <li class="list-group-item d-flex justify-content-between">
+            <div>
+                <h5>Vakantiewoning: {{boeking.naam}}</h5>
+                <br>
+                <p><strong class="strong_menu">Capaciteit:</strong> {{boeking.personen}} personen</p>
+                <p><strong class="strong_menu">Weeknummer:</strong> {{boeking.weeknummer}}</p>
+                <p><strong class="strong_menu">Prijs:</strong> € {{boeking.weekprijs}},-</p>
+            </div>
+            <div>
+                <a href="{{url_for('wijzig_huisje', boeking_id=boeking.id)}}" class="btn">Wijzig Huisje</a>
+                <a href="{{url_for('wijzig_week', boeking_id=boeking.id)}}" class="btn">Wijzig Week</a>
+                <a href="{{url_for('annuleer_boeking', boeking_id=boeking.id)}}" class="btn btn-danger">Annuleer Boeking</a>
+            </div>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+{% else %}
+<br>
+<p>Geen boekingen om weer te geven.</p>
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,185 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>Vakantiewoning type 8p</h1>
+<br>
+
+<!-- <p><img src="{{url_for('static', filename='Vakantiewoning_8p.webp')}}" style="width: 50%; height: auto;"></p> -->
+
+<!-- Galerij -->
+<div class="container" style="border: 2px solid #B497BD;">
+    <div class="row">
+        <!-- Grote afbeelding -->
+        <div class="col-lg-6 col-md-6 col-12">
+            <img src="{{url_for('static', filename='Vakantiewoning_8p.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal1">
+        </div>
+        <!-- Kleine afbeeldingen -->
+        <div class="col-lg-3 col-md-3 col-6">
+            <img src="{{url_for('static', filename='Woonkamer_8p.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal2">
+        </div>
+        <div class="col-lg-3 col-md-3 col-6">
+            <img src="{{url_for('static', filename='Keuken_8p.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal3">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-6">
+            <img src="{{url_for('static', filename='Slaapkamer_2.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal4">
+        </div>
+        <div class="col-lg-3 col-md-3 col-6">
+            <img src="{{url_for('static', filename='Badkamer_met_bad.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal5">
+        </div>
+        <div class="col-lg-3 col-md-3 col-6">
+            <img src="{{url_for('static', filename='Slaapkamer.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal6">
+        </div>
+        <div class="col-lg-3 col-md-3 col-6">
+            <img src="{{url_for('static', filename='Badkamer_zonder_bad.webp')}}" class="gallery-img img-fluid" data-toggle="modal" data-target="#modal7">
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Vakantiewoning_8p.webp')}}" class="img-fluid" alt="Vergrote afbeelding 1">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Woonkamer_8p.webp')}}" class="img-fluid" alt="Vergrote afbeelding 2">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Keuken_8p.webp')}}" class="img-fluid" alt="Vergrote afbeelding 3">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Slaapkamer_2.webp')}}" class="img-fluid" alt="Vergrote afbeelding 4">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="modal5Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Badkamer_met_bad.webp')}}" class="img-fluid" alt="Vergrote afbeelding 5">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="modal6Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Slaapkamer.webp')}}" class="img-fluid" alt="Vergrote afbeelding 6">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="modal7Label" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img src="{{url_for('static', filename='Badkamer_zonder_bad.webp')}}" class="img-fluid" alt="Vergrote afbeelding 7">
+        </div>
+      </div>
+    </div>
+</div>
+
+<br>
+<p>
+    Dit ruime en luxe huisje is ideaal voor grotere gezinnen of vriendengroepen die op zoek zijn naar extra comfort en ruimte. <br>
+    Deze woning biedt plaats aan maximaal 8 personen. 
+</p>
+<p>
+    Deze stijlvol ingerichte woning is van alle gemakken voorzien. <br>
+    De woning beschikt over een ruime woonkamer met een gezellige zithoek en een eettafel. <br> 
+    Door de grote ramen kun je genieten van veel natuurlijk licht en een prachtig uitzicht op de natuur. <br> 
+    Het terras met tuinmeubilair nodigt uit tot heerlijk buiten zitten, barbecueën of gewoon ontspannen. 
+</p>
+<p>
+    De volledig uitgeruste keuken is voorzien van een: <br>
+    <ul>
+        <li>Vaatwasser</li>
+        <li>Combimagnetron</li>
+        <li>Inductiekookplaat</li>
+        <li>Koelkast met vriesvak</li>
+        <li>Koffiezetapparaat (filter en Nespresso)</li>
+        <li>Waterkoker</li>
+        <li>Broodrooster</li>
+        <li>Wijnkoeler</li>
+    </ul>
+</p>
+<p>
+    Er zijn vier slaapkamers, elk voorzien van comfortabele bedden en een eigen badkamer. <br>
+    Elke badkamer heeft een eigen toilet. Twee van de badkamers zijn voorzien van een ligbad. De andere twee hebben een douche. <br>
+    In de hal is een los toilet beschikbaar.
+</p>
+<p>
+    Standaard bieden onze woningen gratis WiFi, een smart-tv en parkeergelegenheid vlakbij de woning. <br>
+    Huisdieren zijn in sommige accommodaties toegestaan op aanvraag.
+</p>
+<p>
+    <!-- U kunt deze woning boeken voor € 800,- per week. -->
+    U kunt deze woning boeken voor € {{weekprijs}},- per week.
+</p>
+<p><a href="/boeken" class="btn">Boeken</a></p>
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,108 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div>
+    <h1>Onze Vakantiewoningen</h1>
+    <p class="lead">
+        Op Vakantiepark De Heidehof geniet je van een luxe verblijf in een van onze moderne vakantiewoningen, gelegen te midden van de prachtige heide.
+    </p>
+    <p>
+        Alle woningen zijn stijlvol ingericht en van alle gemakken voorzien, zodat je verblijf comfortabel en ontspannen is. <br>
+        De woningen beschikken over een ruime woonkamer met een gezellige zithoek en een eettafel. <br> 
+        Door de grote ramen kun je genieten van veel natuurlijk licht en een prachtig uitzicht op de natuur. <br> 
+        Het terras met tuinmeubilair nodigt uit tot heerlijk buiten zitten, barbecueën of gewoon ontspannen. <br>
+        De woningen zijn zo ontworpen dat ze optimaal gebruikmaken van de ruimte, met een open indeling en veel aandacht voor comfort en luxe.
+    </p>
+    <p>
+        De woningen zijn voorzien van een volledig uitgeruste keuken met moderne apparaten en kookgerei, een aparte hal met een los toilet en slaapkamers met elk een eigen badkamer. <br>
+        Onze vakantiewoningen zijn ideaal voor gezinnen, vriendengroepen of stellen die op zoek zijn naar rust, luxe en ruimte.
+    </p>
+    <p>
+        Al onze vakantiewoningen bieden gratis WiFi, een smart-tv en parkeergelegenheid vlakbij de woning. <br>
+        Huisdieren zijn in sommige accommodaties toegestaan op aanvraag. 
+    </p>
+    <p>
+        Geniet van een ontspannen vakantie in luxe en stijl!
+    </p>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-4">
+    <div class="col mb-4">
+        <div class="card">
+            <img src="{{url_for('static', filename='Vakantiewoning_4p.webp')}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Woning 4p</h5>
+                <p class="card-text">
+                    <ul>
+                        <li><strong>Slaapkamers:</strong> 2</li>
+                        <li><strong>Badkamers:</strong> 2</li>
+                        <li><strong>Los toilet:</strong> 1</li>
+                        <li><strong>Oppervlakte:</strong> 75 m<sup>2</sup></li>
+                        <li><strong>Max. personen:</strong> 4</li>
+                    </ul>
+                </p>
+                <a href="/vakantiewoningen/huisje_4p" class="btn">Meer informatie</a>
+                <a href="/boeken" class="btn">Boeken</a>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card">
+            <img src="{{url_for('static', filename='Vakantiewoning_6p.webp')}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Woning 6p</h5>
+                <p class="card-text">
+                    <ul>
+                        <li><strong>Slaapkamers:</strong> 3</li>
+                        <li><strong>Badkamers:</strong> 3</li>
+                        <li><strong>Los toilet:</strong> 1</li>
+                        <li><strong>Oppervlakte:</strong> 100 m<sup>2</sup></li>
+                        <li><strong>Max. personen:</strong> 6</li>
+                    </ul>
+                </p>
+                <a href="/vakantiewoningen/huisje_6p" class="btn">Meer informatie</a>
+                <a href="/boeken" class="btn">Boeken</a>
+            </div>
+        </div>
+    </div>
+    <div class="col mb-4">
+        <div class="card">
+            <img src="{{url_for('static', filename='Vakantiewoning_8p.webp')}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Woning 8p</h5>
+                <p class="card-text">
+                    <ul>
+                        <li><strong>Slaapkamers:</strong> 4</li>
+                        <li><strong>Badkamers:</strong> 4</li>
+                        <li><strong>Los toilet:</strong> 1</li>
+                        <li><strong>Oppervlakte:</strong> 125 m<sup>2</sup></li>
+                        <li><strong>Max. personen:</strong> 8</li>
+                    </ul>
+                </p>
+                <a href="/vakantiewoningen/huisje_8p" class="btn">Meer informatie</a>
+                <a href="/boeken" class="btn">Boeken</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>Boeken</h1>
+<br>
+<form method="POST">
+    {{form.hidden_tag()}}
+    <div class="vakantiehuis-lijst">
+        {% for huis in form.vakantiehuis %}
+            <label class="vakantiehuis-optie">
+                <input type="radio" name="vakantiehuis" value="{{huis.data}}">
+                <div class="vakantiehuis-info">
+                    <div class="clearfix">
+                        <img class="float-left mr-3 img-fluid" style="max-width: 20%; height: auto;" src="static/{{huis.label.text.aantal_personen}}.webp">
+                        <div>
+                            <h3>{{huis.label.text.naam}}</h3>
+                            <p>Aantal personen: {{huis.label.text.aantal_personen}}</p>
+                            <p>Prijs per week: € {{huis.label.text.weekprijs}},-</p>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        {% endfor %}
+    </div>
+    <br>
+    <button type="submit" class="btn">{{form.volgende.label.text}}</button>
+</form>
+
+{% endblock %}
+
+
+
+
+
+ 

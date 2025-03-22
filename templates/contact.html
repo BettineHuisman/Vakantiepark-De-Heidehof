@@ -1,0 +1,127 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1> Contact </h1>
+
+<hr>
+
+<div class="clearfix">
+    <img class="float-right ml-3 img-fluid" style="max-width: 25%; height: auto;" src="{{url_for('static', filename='Receptie.webp')}}">
+    <p>
+        <table>
+            <th>Openingstijden Receptie</th>
+            <tr>
+                <td>Maandag</td>
+                <td>08.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Dinsag</td>
+                <td>08.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Woensdag</td>
+                <td>08.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Donderdag</td>
+                <td>08.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Vrijdag</td>
+                <td>08.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Zaterdag</td>
+                <td>08.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Zondag</td>
+                <td>10.00 - 20.00</td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        Telefoon: 012-9876543 (binnen openingstijden)<br>
+        E-mail: receptie@deheidehof.nl <br><br>
+        Voor dringende zaken buiten openingstijden van de receptie bel: 06-98765432
+    </p>
+</div>
+
+<hr>
+
+<div class="clearfix">
+    <img class="float-right ml-3 img-fluid" style="max-width: 25%; height: auto;" src="{{url_for('static', filename='Pannenkoekrestaurant.webp')}}">
+    <p>
+        <table>
+            <th>Openingstijden 'De Gouden Koekenpan'</th>
+            <tr>
+                <td>Maandag</td>
+                <td>Gesloten</td>
+            </tr>
+            <tr>
+                <td>Dinsag</td>
+                <td>12.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Woensdag</td>
+                <td>12.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Donderdag</td>
+                <td>12.00 - 20.00</td>
+            </tr>
+            <tr>
+                <td>Vrijdag</td>
+                <td>12.00 - 22.00</td>
+            </tr>
+            <tr>
+                <td>Zaterdag</td>
+                <td>10.00 - 22.00</td>
+            </tr>
+            <tr>
+                <td>Zondag</td>
+                <td>10.00 - 20.00</td>
+            </tr>
+        </table>
+    </p>
+    <p>Reserveren? Bel: 012-3456789 of stuur een e-mail naar: reserveren@degoudenkoekenpan.nl</p>
+    <p><a href="/parkfaciliteiten/restaurant" class="btn">Meer informatie</a></p>
+</div>
+
+<hr>
+
+<h5>Adres en contact</h5>
+<br>
+<div>
+    <p>
+        Vakantiepark De Heidehof <br>
+        Zandpad 65 <br>
+        1234 AB  Heideveen <br>
+        Telefoon: 012-9876543 <br>
+        E-mail: info@deheidehof.nl
+    </p>
+</div>
+
+<h5>Neem contact met ons op via onderstaand formulier.</h5>
+
+<form method="post">
+    {{form.hidden_tag()}}
+    <div class="form-group">
+        {{form.naam.label(class="form-label")}}
+        {{form.naam(class="form-control")}}
+    </div>
+    <div class="form-group">
+        {{form.email.label(class="form-label")}}
+        {{form.email(class="form-control")}}
+    </div>
+    <div class="form-group">
+        {{form.bericht.label(class="form-label")}}
+        {{form.bericht(class="form-control")}}
+    </div>
+    <button type="submit" class="btn">{{form.verstuur.label.text}}</button>
+</form>
+
+<hr>
+
+{% endblock %}

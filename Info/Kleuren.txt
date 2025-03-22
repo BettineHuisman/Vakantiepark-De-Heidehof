@@ -1,0 +1,29 @@
+Achtergrond:        #f2f2f2
+
+Tekst:              #333333
+h1 t/m 5:           #8E3B46
+hr:                 #B497BD
+th:                 #8E3B46
+
+Link hover:         #8E3B46
+
+Navigatimenu:       #B497BD
+Dropdown:           #B497BD 
+Dropdown item:      #B497BD 
+Dropdown hover:     #8E3B46
+Dropdown hover bg:  #f2f2f2
+
+Horizontale lijn:   #B497BD  
+
+Knop:               #B497BD
+knop hover:         #8E3B46
+tekst knop hover:   #f2f2f2
+
+Menu vet:           #B497BD 
+
+Card achtergrond:   #f2f2f2
+Card tekst:         #333333
+Card border:        #B497BD
+
+selectie:           #DBBEE1
+

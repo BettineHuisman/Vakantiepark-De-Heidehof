@@ -1,0 +1,37 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h3>Welkom {{ current_user.username }}</h3>
+<br>
+<h1> Beheer boekingen </h1>
+<br>
+{% if boekingen %}
+    <ul class="list-group">
+        {% for boeking in boekingen %}
+        <li class="list-group-item d-flex justify-content-between">
+            <div>
+                <p><h5>Vakantiewoning: {{boeking.naam}}</h5></p>
+                <p>
+                    <strong class="strong_menu">Capaciteit:</strong> {{boeking.personen}} personen <br>
+                    <strong class="strong_menu">Weeknummer:</strong> {{boeking.weeknummer}} <br>
+                    <strong class="strong_menu">Prijs:</strong> € {{boeking.weekprijs}},-
+                </p>
+                <h6>Geboekt door: {{boeking.username}} </h6>
+                <p><strong class="strong_menu">E-mail:</strong> {{boeking.email}}</p>
+            </div>
+            <div>
+                <a href="{{url_for('wijzig_huisje_admin', boeking_id=boeking.id)}}" class="btn">Wijzig Woning</a>
+                <a href="{{url_for('wijzig_week_admin', boeking_id=boeking.id)}}" class="btn">Wijzig Week</a>
+                <a href="{{url_for('woning_vrijgeven', boeking_id=boeking.id)}}" class="btn btn-danger">Woning Vrijgeven</a>
+            </div>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+{% else %}
+<br>
+<p>Geen boekingen om weer te geven.</p>
+{% endif %}
+
+{% endblock %}

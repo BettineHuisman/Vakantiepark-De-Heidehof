@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>Bedankt voor uw boeking!</h1>
+<br><br>
+<h3>Overzicht van uw boeking</h3>
+<br>
+{% if boeking %}
+<ul>
+    {% for item in boeking %}
+    <p>
+        <li><strong class="strong_menu">Type vakantiewoning: </strong>{{item.typehuisje}}</li>
+        <li><strong class ="strong_menu">Vakantiewoning: </strong>{{item.vakantiewoning}}</li>
+        <li><strong class="strong_menu">Weeknummer: </strong>{{item.weeknummer}}</li>
+    </p>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Boekingsgegevens kunnen niet worden getoond</p>
+{% endif %}
+
+<br><br>
+<a href="{{ url_for('mijn_boeking') }}" class="btn">Boeking beheren</a>
+<a href="{{ url_for('home') }}" class="btn">Homepagina</a>
+
+{% endblock %}

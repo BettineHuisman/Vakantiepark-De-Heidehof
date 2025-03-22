@@ -1,0 +1,115 @@
+Vakantiepark De Heidehof
+
+Pagina's van de site:
+- Homepage                                          V
+- Info over het park/faciliteiten                   V  
+    - Pagina over het restaurant                    V
+- Info over de huisjes                              V 
+    - Per huisje/type een pagina met informatie     V
+- Boekingspagina                                    V 
+- Fotogalerij                                       V
+- Contactpagina                                     V
+- Inlogpagina                                       V
+- Boekingsbeheerpagina                              V
+- 404                                               V
+
+Database:
+- Huisjes: ID, (unieke) naam, type
+- Huistype: ID, aantal personen, weekprijs
+- Gasten: ID, gebruikersnaam, wachtwoord
+- Boekingen: ID, ID gast, ID huisje, week 
+
+Navigatimenu boven aan de Pagina
+Dropdown voor 'huisjes' links naar de verschillende types -> andere pagina 
+
+HOMEPAGE 
+Foto met 'WELKOM'
+
+OVER HET PARK
+- Restaurant
+    Tekst + foto's 
+    Link naar de menukaart
+    Openingstijden
+    Telefoonnummer om te reserveren
+- Kinderboerderij
+    Tekst + foto's 
+- Speeltuin
+    Tekst + foto's 
+- Zwembad
+    Tekst + foto's
+ 
+HUISJES 
+3 type huisjes: 4, 6 of 8 personen
+Kaartjes:
+- Foto van het (type) huisje
+- Korte info over het huisje
+- Knop om gelijk te boeken
+- Knop met meer informatie over het huisje
+
+BOEKEN 
+Formulier om te boeken:
+- Huisje selecteren
+- Weeknummer selecteren
+-> Achter de inlog -> ID van de gast uit de sessie halen
+
+FOTOGALERIJ 
+Alle afbeeldingen die gebruikt worden op de site hier nog een keer in een galerij
+
+CONTACTPAGINA 
+Contactgegevens van het park: naam, adres, telefoonnummer, e-mailadres
+Openingstijden van de receptie
+Openingstijden restaurant + telefoonnummer 
+Contactformulier:
+- Naam
+- E-mailadres
+- Vraag
+
+INLOGPAGINA
+Formulier:
+- E-mailadres
+- Wachtwoord 
+-> Aparte registratiepagina maken
+
+BOEKINGSBEHEERPAGINA 
+Naam van de boeker 
+Gegevens van het huisje:
+- Naam huisje
+- Type huisje
+Weeknummer van de boeking
+Week veranderen
+Week erbij -> in het Navigatimenu op 'Boeken' klikken
+Ander (type) huisje 
+
+NAMEN VAN DE HUISJES
+- Korenbloem
+- Klaproos
+- Ereprijs
+- Madeliefje
+- Koekoeksbloem
+- Ridderspoor
+- Kattenstaart
+- Guldenroede
+- Sleutelbloem
+
+Accounts:
+test@test.nl
+test123
+
+pietje@pietje.nl
+pietje123
+
+admin@admin.nl
+admin123
+
+tante@truus.nl
+tantetruus123
+
+theo@theo.nl
+theo123
+
+
+
+
+
+
+

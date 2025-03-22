@@ -1,0 +1,163 @@
+body {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, th, a:hover {
+  color: #8E3B46;
+}
+
+hr { 
+  border-color: #B497BD;
+  border-width: 2px;
+}
+
+td, li, a {
+  color: #333333;
+}
+
+button {
+  border: none;
+}
+
+.btn {
+  background-color: #B497BD;
+  color: #333333;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #8E3B46;
+  color: #f2f2f2;
+}
+
+.btn-danger {
+  background-color: #8E3B46;
+  color: #f2f2f2;
+}
+
+.btn-danger:hover {
+  background-color: #B497BD;
+  color: #333333;
+}
+
+.inline-link {
+  color:#333333;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #B497BD;
+  color: #333333;
+  /* padding: 10px; */
+  padding: 1.25vh;
+  margin: 0;
+}
+
+.nav-link:hover {
+  color: #8E3B46 !important;
+}
+
+.dropdown-menu {
+  background-color: #B497BD; 
+  padding: 0; 
+  margin: 0; 
+  border: none; 
+}
+
+.dropdown-item {
+  background-color: #B497BD;
+}
+
+.dropdown-item:hover {
+  color: #8E3B46 !important;
+  background-color: #f2f2f2 !important;
+}
+
+.content {
+  /* margin-top: 60px; */
+  margin-top: 7.5vh;
+  /* margin-left: 20px; */
+  margin-left: 2.5vh; 
+  /* margin-right: 20px; */
+  margin-right: 2.5vh;
+  /* margin-bottom: 60px; */
+  margin-bottom: 7.5vh;
+}
+
+.card {
+  background-color: #f2f2f2;
+  color: #333333;
+  border-color: #B497BD;
+  border-width: 2px;
+}
+
+.strong_menu {
+  color:#B497BD;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* .border {
+  color: #B497BD;
+} */
+
+.vakantiehuis-lijst {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.vakantiehuis-optie {
+  border: 2px solid #B497BD;
+  padding: 1rem;
+  width: 80%;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.vakantiehuis-optie:hover {
+  border-color: #8E3B46;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #B497BD;
+}
+
+.vakantiehuis-optie input[type="radio"] {
+  display: none;
+}
+
+.vakantiehuis-optie input[type="radio"]:checked + .vakantiehuis-info {
+  border-color: #8E3B46;
+  /* background-color: #B497BD; */
+  background-color: #DBBEE1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vakantiehuis-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-group-item {
+  border: 2px solid #B497BD;
+  background-color: #f2f2f2;
+}
