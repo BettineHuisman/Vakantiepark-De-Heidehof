@@ -23,7 +23,12 @@
             <div>
                 <a href="{{url_for('wijzig_huisje_admin', boeking_id=boeking.id)}}" class="btn">Wijzig Woning</a>
                 <a href="{{url_for('wijzig_week_admin', boeking_id=boeking.id)}}" class="btn">Wijzig Week</a>
-                <a href="{{url_for('woning_vrijgeven', boeking_id=boeking.id)}}" class="btn btn-danger">Woning Vrijgeven</a>
+                <!-- <a href="{{url_for('woning_vrijgeven', boeking_id=boeking.id)}}" class="btn btn-danger">Woning Vrijgeven</a> -->
+                <!-- 'Vrijgeef formulier' -->
+                <form style="display:inline;" method="post" action="{{url_for('woning_vrijgeven', boeking_id=boeking.id)}}">
+                    {{form.hidden_tag()}}
+                    <button type="submit" class="btn btn-danger">Woning Vrijgeven</button>
+                </form>
             </div>
         </li>
         <br>

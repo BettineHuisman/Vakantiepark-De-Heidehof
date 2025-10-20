@@ -47,6 +47,10 @@ class RegistratieFormulier(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user:
             raise ValidationError("Dit e-mailadres is al geregistreerd.")
+        
+class DummyForm(FlaskForm):
+    pass
+
 
 
 

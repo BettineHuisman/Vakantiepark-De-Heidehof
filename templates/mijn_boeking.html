@@ -23,7 +23,12 @@
             <div>
                 <a href="{{url_for('wijzig_huisje', boeking_id=boeking.id)}}" class="btn">Wijzig Huisje</a>
                 <a href="{{url_for('wijzig_week', boeking_id=boeking.id)}}" class="btn">Wijzig Week</a>
-                <a href="{{url_for('annuleer_boeking', boeking_id=boeking.id)}}" class="btn btn-danger">Annuleer Boeking</a>
+                <!-- <a href="{{url_for('annuleer_boeking', boeking_id=boeking.id)}}" class="btn btn-danger">Annuleer Boeking</a> -->
+                <!-- "Annuleer formulier" -->
+                <form style="display:inline;" method="post" action="{{url_for('annuleer_boeking', boeking_id=boeking.id)}}">
+                    {{form.hidden_tag()}}
+                    <button type="submit" class="btn btn-danger">Annuleer Boeking</button>
+                </form>
             </div>
         </li>
         <br>

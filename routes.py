@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, abort, request, session
 from functools import wraps
 from vakantiepark import app, db, bcrypt
-from formulieren import ContactFormulier, InlogFormulier, RegistratieFormulier, VakantiehuisFormulier, WeekFormulier
+from formulieren import ContactFormulier, InlogFormulier, RegistratieFormulier, VakantiehuisFormulier, WeekFormulier, DummyForm
 from datamodel import User, Huistype, Vakantiehuis, Boeking
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -199,6 +199,7 @@ def registreren():
 @app.route("/mijn_boeking")
 @login_required
 def mijn_boeking():
+    formulier = DummyForm()
     # mijn_boekingen = Boeking.query.filter_by(user_id=current_user.id).all()
     mijn_boekingen = db.session.query(
         Boeking.id,
@@ -214,8 +215,7 @@ def mijn_boeking():
     ).order_by(Boeking.weeknummer.asc()
     ).all()
 
-    return render_template("mijn_boeking.html", mijn_boekingen=mijn_boekingen, title="Mijn Boeking")
-
+    return render_template("mijn_boeking.html", form=formulier, mijn_boekingen=mijn_boekingen, title="Mijn Boeking")
 
 @app.route("/mijn_boeking/wijzig_huisje/<int:boeking_id>", methods=['GET', 'POST'])
 @login_required
@@ -280,7 +280,7 @@ def wijzig_week(boeking_id):
         return redirect(url_for("mijn_boeking"))
     return render_template("wijzig_week.html", form=formulier, boeking=boeking, woning_naam=woning_naam, title="Boeking Wijzigen")
 
-@app.route("/mijn_boeking/annuleren/<int:boeking_id>")
+@app.route("/mijn_boeking/annuleren/<int:boeking_id>", methods=['POST'])
 @login_required
 def annuleer_boeking(boeking_id):
     boeking = Boeking.query.get_or_404(boeking_id)
@@ -294,6 +294,7 @@ def annuleer_boeking(boeking_id):
 @login_required
 @admin_required
 def beheer_admin():
+    formulier = DummyForm()
     boekingen = db.session.query(
         Boeking.id,
         Boeking.user_id,
@@ -310,9 +311,9 @@ def beheer_admin():
     ).order_by(Boeking.weeknummer.asc()
     ).all()
 
-    return render_template("admin.html", boekingen=boekingen, title="Beheer Boekingen")
+    return render_template("admin.html", form=formulier, boekingen=boekingen, title="Beheer Boekingen")
     
-@app.route("/beheer_admin/vrijgeven/<int:boeking_id>")
+@app.route("/beheer_admin/vrijgeven/<int:boeking_id>", methods=['POST'])
 @login_required
 @admin_required
 def woning_vrijgeven(boeking_id):
